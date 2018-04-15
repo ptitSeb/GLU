@@ -1,0 +1,13 @@
+*.o
+*.lo
+*.la
+.libs
+.deps
+.dirstamp
+Makefile
+config.log
+config.status
+configure.lineno
+glu.pc
+libtool
+
