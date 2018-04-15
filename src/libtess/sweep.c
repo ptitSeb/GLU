@@ -1029,7 +1029,11 @@ static void ConnectLeftVertex( GLUtesselator *tess, GLUvertex *vEvent )
   tmp.eUp = vEvent->anEdge->Sym;
   /* __GL_DICTLISTKEY */ /* __gl_dictListSearch */
   regUp = (ActiveRegion *)dictKey( dictSearch( tess->dict, &tmp ));
+  if(!regUp)
+    return;
   regLo = RegionBelow( regUp );
+  if(!regLo)
+    return;
   eUp = regUp->eUp;
   eLo = regLo->eUp;
 
